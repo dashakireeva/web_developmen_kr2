@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport"> <!-- Настройка адаптивного дизайна для мобильных устройств -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>🚀 Космические сувениры - Каталог</title>
     <link rel="stylesheet" href="stylenavigation.css">
     <link rel="stylesheet" href="stylebackground.css">
@@ -16,7 +16,7 @@
     <div class="space-nav">
         <ul class="nav nav-tabs justify-content-center">
             <li class="nav-item">
-                <a class="nav-link" href="./index.html">🚀 Космическая эра</a>
+                <a class="nav-link" href="./main_page.html">🚀 Космическая эра</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link active" href="./souvenirs.html">👨‍🚀 Космические сувениры</a>
@@ -260,51 +260,64 @@
                 <i class="fas fa-rocket me-2"></i> ОФОРМИТЬ КОСМИЧЕСКИЙ ЗАКАЗ
             </button>
         </div>
+
+        <!-- Скрытая форма для отправки данных на сервер -->
+        <form id="orderForm" action="https://www.bing.com/search?" method="GET" target="_blank" style="display: none;">
+            <input type="hidden" name="q" value="Заказ космических сувениров">
+            <input type="hidden" name="total_amount" id="hidden_total" value="0">
+            <input type="hidden" name="product_1" id="hidden_product_1" value="0">
+            <input type="hidden" name="product_2" id="hidden_product_2" value="0">
+            <input type="hidden" name="product_3" id="hidden_product_3" value="0">
+            <input type="hidden" name="product_4" id="hidden_product_4" value="0">
+            <input type="hidden" name="product_5" id="hidden_product_5" value="0">
+            <input type="hidden" name="order_date" id="hidden_date" value="">
+        </form>
     </div>
 
     <script>
+        // Массив с названиями товаров для отправки
+        const productNames = [
+            "Модель ракеты Восток-1",
+            "Фигурка космонавта Юрия Гагарина",
+            "Набор космической еды Орбита",
+            "Домашний планетарий Звездное небо",
+            "Телескоп для начинающих Галилео"
+        ];
+
         // Основные функции для управления количеством товаров
         
+        // Функция для увеличения количества товара
         function plus(n) {
-            // Получаем элементы по ID
             const cena = document.getElementById("cena_" + n);
             const col = document.getElementById("col_" + n);
             const cenap = document.getElementById("cenap_" + n);
             const itog = document.getElementById("itog");
             const row = document.querySelector(`[onclick="plus(${n})"]`).closest('tr');
             
-            // Увеличиваем количество
             col.innerHTML = 1 + Number(col.innerHTML);
-            
-            // Обновляем цену за все штуки этого товара
             cenap.innerHTML = Number(cenap.innerHTML) + Number(cena.innerHTML);
-            
-            // Обновляем общую сумму
             itog.innerHTML = Number(itog.innerHTML) + Number(cena.innerHTML);
             
-            // Анимация добавления
             row.classList.add('pulse');
             setTimeout(() => {
                 row.classList.remove('pulse');
             }, 300);
             
-            // Обновляем кнопку оформления заказа
             updateCheckoutButton();
         }
         
+        // Функция для уменьшения количества товара
         function minus(n) {
             const cena = document.getElementById("cena_" + n);
             const col = document.getElementById("col_" + n);
             const cenap = document.getElementById("cenap_" + n);
             const itog = document.getElementById("itog");
             
-            // Проверяем, что количество больше 0
             if (col.innerHTML != "0") {
                 col.innerHTML = Number(col.innerHTML) - 1;
                 cenap.innerHTML = Number(cenap.innerHTML) - Number(cena.innerHTML);
                 itog.innerHTML = Number(itog.innerHTML) - Number(cena.innerHTML);
                 
-                // Обновляем кнопку оформления заказа
                 updateCheckoutButton();
             }
         }
@@ -323,7 +336,7 @@
             }
         }
         
-        // Функция оформления заказа
+        // Функция оформления заказа с отправкой на сервер
         function checkout() {
             const total = Number(document.getElementById("itog").innerHTML);
             
@@ -332,45 +345,61 @@
                 return;
             }
             
-            // Собираем информацию о выбранных товарах
+            // Формируем строку с деталями заказа
             let orderDetails = "🚀 ВАШ КОСМИЧЕСКИЙ ЗАКАЗ:\n\n";
             let hasItems = false;
             
+            // Заполняем скрытые поля формы
+            document.getElementById("hidden_total").value = total;
+            
+            // Получаем текущую дату
+            const now = new Date();
+            document.getElementById("hidden_date").value = now.toISOString().split('T')[0];
+            
+            // Собираем информацию о товарах для формы
+            let orderSummary = "";
+            
             for (let i = 1; i <= 5; i++) {
                 const quantity = Number(document.getElementById("col_" + i).innerHTML);
+                
                 if (quantity > 0) {
                     hasItems = true;
+                    
                     const price = Number(document.getElementById("cena_" + i).innerHTML);
                     const totalPrice = Number(document.getElementById("cenap_" + i).innerHTML);
-                    const productName = document.querySelector(`#cena_${i}`).closest('tr').querySelector('.souvenir-name').textContent.split('\n')[0];
+                    const productName = productNames[i-1];
                     
                     orderDetails += `${productName}\n`;
                     orderDetails += `Количество: ${quantity} шт. x ${price} руб. = ${totalPrice} руб.\n\n`;
+                    
+                    // Добавляем информацию о товаре в строку для формы
+                    orderSummary += `${productName}:${quantity}шт.;`;
+                    
+                    // Устанавливаем значение скрытого поля для этого товара
+                    document.getElementById(`hidden_product_${i}`).value = `${quantity} шт.`;
+                } else {
+                    // Если товар не выбран, устанавливаем значение "0"
+                    document.getElementById(`hidden_product_${i}`).value = "0";
                 }
             }
             
             orderDetails += `📊 ИТОГО: ${total} руб.\n\n`;
-            orderDetails += "Спасибо за ваш заказ! Наш менеджер свяжется с вами для подтверждения.";
+            orderDetails += "Отправляем данные заказа на сервер...";
             
-            // Показываем информацию о заказе
-            alert(orderDetails);
+            // Показываем пользователю информацию о заказе
+            const userConfirmed = confirm(orderDetails + "\n\nНажмите ОК для отправки заказа на сервер Bing");
             
-            // Здесь можно добавить отправку данных на сервер
-            console.log("Заказ оформлен на сумму:", total, "руб.");
-            
-            // Сброс корзины (опционально)
-            // resetCart();
-        }
-        
-        // Функция для сброса корзины
-        function resetCart() {
-            for (let i = 1; i <= 5; i++) {
-                document.getElementById("col_" + i).innerHTML = "0";
-                document.getElementById("cenap_" + i).innerHTML = "0";
+            if (userConfirmed) {
+                // Добавляем информацию о заказе в параметр q
+                const form = document.getElementById("orderForm");
+                form.querySelector('input[name="q"]').value = `Заказ космических сувениров на сумму ${total} руб. ${orderSummary}`;
+                
+                // Отправляем форму (открывается новое окно с Bing)
+                form.submit();
+                
+                // Дополнительное сообщение
+                alert("✅ Заказ успешно отправлен! Открывается страница подтверждения...");
             }
-            document.getElementById("itog").innerHTML = "0";
-            updateCheckoutButton();
-            alert("Корзина очищена!");
         }
         
         // Инициализация при загрузке страницы
@@ -383,4 +412,4 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 
