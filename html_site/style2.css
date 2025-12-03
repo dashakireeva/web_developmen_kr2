@@ -1,0 +1,201 @@
+/* Основные стили для всей страницы */
+body {
+    background: linear-gradient(135deg, #0a1929 0%, #1a3a5f 100%); /* Градиентный фон */
+    color: #e0f0ff;  /* Цвет текста */
+    min-height: 100vh;
+    padding: 20px;    /* Внутренние отступы по краям */
+}
+
+/* Стили для заголовка страницы */
+.space-header {
+    text-align: center; /* Центрирование содержимого */
+    margin: 30px 0 50px; /* Отступы сверху и снизу */
+    position: relative;
+}
+
+/* Главный заголовок h1 */
+.space-header h1 {
+    color: #77d0ff;
+    font-size: 2.8rem; /* размер шрифта */
+    text-shadow: 0 0 20px rgba(119, 208, 255, 0.5);  /* Эффект свечения текста */
+    margin-bottom: 15px;   /* Отступ снизу */
+}
+
+/* Подзаголовок под h1 */
+.space-header p {
+    color: #b7dff0;
+    font-size: 1.2rem; /* размер шрифта */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Стили для таблицы с товарами */
+.space-table {
+    background: rgba(34, 92, 155, 0.8);
+    border-radius: 15px;  /* Закругленные углы */
+    border: 1px solid rgba(119, 208, 255, 0.3);  /* Полупрозрачная рамка */
+    overflow: hidden;    /* Скрытие содержимого за пределами скругленных углов */
+}
+
+/* Стили для ячеек с данными таблицы */
+.space-table td {
+    vertical-align: middle; /* Вертикальное выравнивание по середине */
+}
+
+/* Название товара */
+.souvenir-name {
+    font-size: 1.3rem;  
+    font-weight: bold;    /* Жирный шрифт */
+    color: #e0f0ff;
+    margin-bottom: 5px;   /* Отступ снизу */
+}
+
+/* Описание товара */
+.souvenir-description {
+    color: #b7dff0;
+    font-size: 0.9rem;
+    margin-top: 8px;   /* Отступ сверху */
+}
+
+/* Стили для отображения цены */
+.price-tag {
+    color: #77d0ff;
+    font-size: 1.5rem;
+    font-weight: bold;   /* Жирный шрифт */
+    text-shadow: 0 0 10px rgba(119, 208, 255, 0.3);
+}
+
+/* Контейнер для управления количеством товара */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Кнопки увеличения/уменьшения количества */
+.quantity-btn {
+    background: rgba(119, 208, 255, 0.2);
+    color: #77d0ff;
+    width: 40px;    /* Круглая форма */
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.3s ease; /* Плавный переход всех свойств */
+    display: flex;    /* Центрирование содержимого */
+    align-items: center;
+    justify-content: center;
+}
+
+/* Эффект при наведении на кнопку количества */
+.quantity-btn:hover {
+    background: rgba(119, 208, 255, 0.4);
+    transform: scale(1.1);    /* Увеличение кнопки */
+    box-shadow: 0 0 15px rgba(119, 208, 255, 0.5);
+}
+
+/* Отображение текущего количества товара */
+.quantity-value {
+    min-width: 60px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;     /* Жирный шрифт */
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 5px 15px;    /* Внутренние отступы */
+    border-radius: 10px;
+}
+
+/* Общая стоимость товара (количество * цена) */
+.total-price {
+    color: #4cd964;
+    font-size: 1.5rem;
+    font-weight: bold;   /* Жирный шрифт */
+}
+
+/* Секция с итоговой суммой заказа */
+.total-section {
+    background: rgba(26, 58, 95, 0.7);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 40px;   /* Отступ сверху */
+    border: 2px solid #77d0ff;    /* Голубая рамка */
+    text-align: center;
+}
+
+/* Надпись "Итоговая сумма" */
+.total-label {
+    font-size: 1.8rem;
+    color: #77d0ff;
+    margin-bottom: 15px;
+}
+
+/* Отображение итоговой суммы */
+.total-amount {
+    font-size: 2.5rem;
+    color: #4cd964;
+    font-weight: bold;   /* Жирный шрифт */
+    text-shadow: 0 0 15px rgba(76, 217, 100, 0.5);
+}
+
+/* Кнопка оформления заказа */
+.checkout-btn {
+    background: linear-gradient(135deg, #77d0ff, #5b89e4);
+    color: white;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 25px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Эффект при наведении на кнопку оформления */
+.checkout-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(119, 208, 255, 0.4);
+}
+
+/* Изображение товара */
+.souvenir-image {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;  /* Сохранение пропорций изображения */
+    border-radius: 10px;
+    border: 2px solid rgba(119, 208, 255, 0.3);
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* Класс для применения анимации пульсации */
+.pulse {
+    animation: pulse 0.3s ease;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    /* Уменьшение шрифта в таблице */
+    .space-table {
+        font-size: 0.9rem;  
+    }
+
+    /* Уменьшение отступов в ячейках таблицы */
+    .space-table td,
+    .space-table th {
+        padding: 10px;
+    }
+
+    .quantity-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Уменьшение размера изображений товаров */
+    .souvenir-image {
+        width: 70px;
+        height: 70px;
+    }
+}

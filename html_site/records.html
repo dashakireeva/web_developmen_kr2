@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"> <!-- Настройка адаптивного дизайна для мобильных устройств -->
+    <title>Космические герои и технологии</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="stylenavigation.css">
+    <link rel="stylesheet" href="stylebackground.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="button.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center mb-5">
+            <img src="background/rocket.webp"
+                class="img-fluid" style="max-width: 150px; filter: drop-shadow(0 0 10px #77d0ff)" alt="Космическая эмблема">
+            <h1 class="hero-title">🚀 КОСМИЧЕСКИЕ ГЕРОИ И ТЕХНОЛОГИИ</h1>
+            <p class="text-muted" style="color: #b7dff0 !important;">Исследуйте великих покорителей космоса и их
+                достижения</p>
+        </header>
+
+    <div class="card">
+        <div class="card-body">
+            <!-- Основная навигация -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="./main_page.html">🚀 Космическая эра</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./souvenirs.html">👨‍🚀 Космические сувениры</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./records.html">⏱️ Космические герои и технологии</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./orders.html">🛍 Заказы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://ru.wikipedia.org/wiki/Байконур" target="_blank">🌌 Байконур</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Основные космонавты -->
+        <h1>Основные космонавты и астронавты</h1>
+
+        <table class="gallery">
+            <tr>
+                <td>
+                    <img src="https://postmania.ru//files/products/0736-a.800x600.jpg"
+                        alt="Юрий Гагарин" class="thumbnail"
+                        data-description="Юрий Гагарин - первый человек в космосе. 12 апреля 1961 года совершил исторический полёт на корабле "Восток-1", открыв новую эру в исследовании космоса. Его знаменитая фраза: "Поехали!" стала символом начала космической эры."
+                        onclick="openModal(this.src, this.getAttribute('data-description'))">
+                    <div class="character-name">Юрий Гагарин</div>
+                </td>
+                <td>
+                    <img src="https://museumgagarin.ru/upload/medialibrary/fa7/fa7b524e7153455254cc37f007dffd56.jpg"
+                        alt="Валентина Терешкова" class="thumbnail"
+                        data-description="Валентина Терешкова - первая женщина-космонавт. 16 июня 1963 года совершила полёт на корабле "Восток-6", проведя в космосе почти трое суток. Её позывной "Чайка" стал известен всему миру."
+                        onclick="openModal(this.src, this.getAttribute('data-description'))">
+                    <div class="character-name">Валентина Терешкова</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://s12.stc.yc.kpcdn.net/share/i/12/8198421/wr-960.webp"
+                        alt="Алексей Леонов" class="thumbnail"
+                        data-description="Алексей Леонов - первый человек, вышедший в открытый космос. 18 марта 1965 года совершил выход из корабля "Восход-2", проведя в открытом космосе 12 минут 9 секунд."
+                        onclick="openModal(this.src, this.getAttribute('data-description'))">
+                    <div class="character-name">Алексей Леонов</div>
+                </td>
+                <td>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Neil_Armstrong_pose.jpg"
+                        alt="Нил Армстронг" class="thumbnail"
+                        data-description="Нил Армстронг - первый человек, ступивший на Луну. 20 июля 1969 года в ходе миссии "Аполлон-11" произнёс знаменитую фразу: "Это один маленький шаг для человека, но гигантский скачок для всего человечества"."
+                        onclick="openModal(this.src, this.getAttribute('data-description'))">
+                    <div class="character-name">Нил Армстронг</div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Космические технологии -->
+        <h1>Космические корабли и станции</h1>
+
+        <table class="gallery">
+            <tr>
+                <td>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/International_Space_Station_after_undocking_of_STS-132.jpg/800px-International_Space_Station_after_undocking_of_STS-132.jpg"
+                        alt="МКС" class="thumbnail"
+                        onclick="openModal(this.src, 'Международная космическая станция (МКС) - самый крупный искусственный объект на орбите Земли. Совместный проект 15 стран, постоянно обитаема с 2000 года.')">
+                    <div class="character-name">Международная Космическая Станция</div>
+                </td>
+                <td>
+                    <img src="https://www.fromspacewithlove.com/wp-content/uploads/2020/05/spacex-crew-dragon-hero-img.jpg"
+                        alt="Crew Dragon" class="thumbnail"
+                        onclick="openModal(this.src, 'Crew Dragon - первый частный пилотируемый космический корабль. Разработан компанией SpaceX, с 2020 года доставляет астронавтов на МКС.')">
+                    <div class="character-name">Crew Dragon (SpaceX)</div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://lifehacker.ru/wp-content/uploads/2024/11/gqr2opt2_1732881348.png"
+                        alt="Вояджер" class="thumbnail"
+                        onclick="openModal(this.src, 'Вояджер-1 и Вояджер-2 - самые далёкие искусственные объекты. Запущены в 1977 году, покинули Солнечную систему и продолжают передавать данные из межзвёздного пространства.')">
+                    <div class="character-name">Вояджер</div>
+                </td>
+                <td>
+                    <img src="https://resizer.mail.ru/p/e427431e-af23-5770-9418-ea734dbaa3d5/AQA435tklyA5fLP5IXVezf9e4R_jhP-LXLYoKJExSllPlZTfwBG2j-3Ozz11LVzeHiZUw3X8To5uPrlyIWFIFTX-DBs.jpg"
+                        alt="Хаббл" class="thumbnail"
+                        onclick="openModal(this.src, 'Телескоп Хаббл - самый известный космический телескоп. Запущен в 1990 году, сделал более 1.5 миллионов наблюдений, революционизировал астрономию.')">
+                    <div class="character-name">Телескоп Хаббл</div>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Факты о космосе -->
+        <div class="facts-section">
+            <h2 class="section-title text-center">🌌 Интересные факты о космосе</h2>
+            <ul>
+                <li>Юрий Гагарин провёл в космосе всего 108 минут, но это изменило историю человечества</li>
+                <li>Валентина Терешкова до сих пор остаётся единственной женщиной, совершившей одиночный космический полёт
+                </li>
+                <li>Нил Армстронг и Базз Олдрин провели на поверхности Луны всего 2 часа 31 минуту</li>
+                <li>Вояджер-1 сейчас находится на расстоянии более 23 миллиардов километров от Земли</li>
+                <li>МКС совершает полный оборот вокруг Земли за 90 минут, то есть 16 раз в сутки</li>
+                <li>Телескоп Хаббл вращается вокруг Земли со скоростью 28 000 км/ч</li>
+            </ul>
+        </div>
+
+        <!-- Модальное окно -->
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <img id="modalImg" class="modal-image" src="" alt="">
+                <p id="modalDesc" class="modal-description"></p>
+            </div>
+        </div>
+
+        <!-- Кнопка "Наверх" -->
+        <a href="#" class="back-to-top">↑ Наверх ↑</a>
+    </div>
+</body>
+
+</html>

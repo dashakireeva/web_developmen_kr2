@@ -1,0 +1,269 @@
+/* Обертка для основного контента */
+.content-wrapper {
+    background-color: rgba(10, 25, 41, 0.85);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(119, 208, 255, 0.3); /* Полупрозрачная голубая рамка */
+}
+
+/* Главный заголовок */
+.hero-title {
+    color: #77d0ff;
+    text-shadow: 0 2px 10px rgba(119, 208, 255, 0.5),
+        0 0 20px rgba(119, 208, 255, 0.3);
+    margin: 30px 0;
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+/* Космическая рамка для выделения контента */
+.space-frame {
+    min-height: 300px;
+    padding: 40px 30px;   /* Внутренние отступы */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;    /* Скрытие содержимого за пределами рамки */
+}
+
+/* Стили для списка внутри рамки */
+.frame-list {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;    /* Межстрочный интервал */
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative;
+}
+
+/* Элементы списка */
+.frame-list li {
+    padding: 12px 0;
+    margin: 8px 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    border-bottom: 1px solid rgba(119, 208, 255, 0.2);
+}
+
+/* Заголовок секции */
+.section-title {
+    color: #77d0ff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    margin-bottom: 25px;
+    font-size: 2rem;
+    border-bottom: 2px solid #77d0ff;
+    padding-bottom: 10px;
+}
+
+/* Секция с фактами */
+.facts-section {
+    background: linear-gradient(135deg, rgba(10, 25, 41, 0.8), rgba(26, 58, 95, 0.8));
+    color: #e0f0ff;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 25px 0;
+    border: 1px solid rgba(119, 208, 255, 0.3);
+}
+
+/* Элементы списка в секции фактов */
+.facts-section li {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Псевдоэлемент для иконки перед элементом списка */
+.facts-section li::before {
+    content: '🚀';
+    position: absolute;
+    left: -5px;
+}
+
+/* Кастомная карточка */
+.card-custom {
+    background: rgba(10, 25, 41, 0.7);
+    border: 2px solid #77d0ff;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 25px 0;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на карточку */
+.card-custom:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(119, 208, 255, 0.2);
+    border-color: #ffffff;
+}
+
+/* Верхняя часть карточки (изображение) */
+.card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #77d0ff;
+}
+
+/* Кастомное адаптивное изображение */
+.img-fluid-custom {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 2px solid rgba(119, 208, 255, 0.5);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на изображение */
+.img-fluid-custom:hover {
+    transform: scale(1.02);
+    border-color: #ffffff;
+}
+
+/* Кнопка "Вернуться наверх" */
+.back-to-top {
+    display: block;
+    text-align: center;
+    margin: 30px 0;
+    color: #77d0ff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #77d0ff;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.back-to-top:hover {
+    background-color: rgba(119, 208, 255, 0.2);
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Галерея стили */
+.gallery {
+    border-spacing: 20px;
+    border-collapse: separate;
+    margin: 40px auto;
+}
+
+/* Миниатюры в галерее */
+.thumbnail {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px solid rgba(119, 208, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Эффект при наведении на миниатюру */
+.thumbnail:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 10px 25px rgba(119, 208, 255, 0.4);
+    border-color: #ffffff;
+}
+
+/* Ячейки таблицы галереи */
+td {
+    text-align: center;
+    padding: 15px;
+    background: rgba(10, 25, 41, 0.6);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(119, 208, 255, 0.2);
+}
+
+/* Заголовок h1 */
+h1 {
+    text-align: center;
+    color: #77d0ff;
+    text-shadow: 0 2px 10px rgba(119, 208, 255, 0.5);
+    margin: 40px 0;
+    font-size: 2.5rem;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Контент модального окна */
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(135deg, #0a1929, #1a3a5f);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    border: 2px solid #77d0ff;
+}
+
+/* Изображение в модальном окне */
+.modal-image {
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 2px solid rgba(119, 208, 255, 0.5);
+}
+
+/* Описание в модальном окне */
+.modal-description {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+    color: #e0f0ff;
+    line-height: 1.8;
+    padding: 20px;
+    background: rgba(10, 25, 41, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(119, 208, 255, 0.3);
+}
+
+/* Кнопка закрытия модального окна */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #77d0ff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку закрытия */
+.close:hover {
+    color: #ffffff;
+    transform: rotate(90deg);
+}
+
+/* Имя персонажа под миниатюрой */
+.character-name {
+    color: #77d0ff;
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}

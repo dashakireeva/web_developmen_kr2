@@ -1,0 +1,17 @@
+body {
+      background-image: url("background/background.jpg");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      padding-top: 20px;
+  }
+
+  .card,
+  .nav-link,
+  .alert,
+  .table td {
+      background-color: transparent !important;  /* Убирает любой цвет фона */
+      background: transparent !important;    /* Убирает градиенты и изображения фона */
+      border-color: rgba(255, 255, 255, 0.3) !important;   /* Делает границы полупрозрачными белыми */
+      color: #b7dff0 !important;   /* Устанавливает цвет текста*/
+  }

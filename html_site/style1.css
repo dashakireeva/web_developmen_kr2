@@ -1,0 +1,76 @@
+  /* Стили для всех секций контента */
+  section {
+    background-color: #c1e0ff90;  /* Цвет фона*/
+    margin: 20px auto;            /* Внешние отступы, автоматически по бокам */
+    padding: 20px;                /* Внутренние отступы*/
+    max-width: 800px;             /* Максимальная ширина */
+    border-radius: 8px;           /* Закругление углов*/
+  }
+
+  /* Стили для выделенных секций */
+    .section-highlight {
+        background-color: #c1e0ff90;  /* Цвет фона */
+        margin: 20px auto;            /* Внешние отступы */
+        padding: 20px;                /* Внутренние отступы */
+        max-width: 800px;             /* Максимальная ширина */
+        border-radius: 20px;          /* Закругление углов */
+        border-left: 4px solid #0055ff;  /* Левая граница */
+    }
+
+  /* Стили для графических ссылок(изображений-ссылок) */
+  .graphic-link {
+      transition: transform 0.3s ease; /* Анимация */
+  }
+
+  /* Эффект при наведении на графические ссылки */
+  .graphic-link:hover {
+      transform: scale(1.05); /* Масштабирование */
+  }
+
+  /* Для секций с контентом */
+    section,
+    .section-highlight {
+        background-color: rgba(0, 20, 40, 0.6) !important;  /* Темно-синий полупрозрачный фон */
+        backdrop-filter: blur(5px);                           /* Эффект размытия заднего фона */
+        border: 1px solid rgba(119, 208, 255, 0.3) !important;  /* Полупрозрачная голубая рамка */
+        border-radius: 15px !important;                       /* Закругление углов */
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);           /* Тень */
+        color: #e0f0ff !important;                            /* Цвет текста*/
+        margin: 20px auto;                                    /* Отступы */
+        padding: 25px;                                        /* Внутренние отступы */
+        max-width: 900px;                                     /* Максимальная ширина */
+    }
+
+  /* Стили для заголовки */
+  h1, h2, h3, h4, h5, h6 {
+      color: #77d0ff !important;  /* Цвет заголовков */
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);  /* Тень текста */
+  }
+
+  /* Текст */
+  p, li, span, div {
+      color: #3b88d4 !important;   /* Цвет текста */
+  }
+
+  /* Стили для кнопок */
+  .btn {
+      background-color: rgba(119, 208, 255, 0.2) !important;
+      border: 1px solid #77d0ff !important;
+      color: #77d0ff !important;
+  }
+
+  /*Эффект при наведение на кнопки */
+  .btn:hover {
+      background-color: rgba(119, 208, 255, 0.4) !important;
+      transform: scale(1.05);
+  }
+
+  /* Футер */
+  footer {
+      background-color: rgba(0, 20, 40, 0.8) !important;
+      color: #77d0ff !important;
+      margin-top: 50px;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid rgba(119, 208, 255, 0.3);
+  }

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"> <!-- Настройка адаптивного дизайна для мобильных устройств -->
+    <title>🚀 Космические сувениры - Каталог</title>
+    <link rel="stylesheet" href="stylenavigation.css">
+    <link rel="stylesheet" href="stylebackground.css">
+    <link rel="stylesheet" href="style2.css">    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <div class="space-nav">
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="./main_page.html">🚀 Космическая эра</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="./souvenirs.html">👨‍🚀 Космические сувениры</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./records.html">⏱️ Космические герои и технологии</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./orders.html">🛍 Заказы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://ru.wikipedia.org/wiki/Байконур" target="_blank">🌌 Байконур</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Заголовок -->
+    <div class="space-header">
+        <h1>🚀 КОСМИЧЕСКИЕ СУВЕНИРЫ</h1>
+        <p>Приобретите частичку космоса! От моделей ракет до настоящей космической еды</p>
+    </div>
+
+    <!-- Каталог товаров -->
+    <div class="container">
+        <table class="table space-table">
+            <thead>
+                <tr>
+                    <th width="25%">КОСМИЧЕСКИЙ ТОВАР</th>
+                    <th width="20%">ЦЕНА ЗА 1 ШТУКУ</th>
+                    <th width="30%">КОЛИЧЕСТВО</th>
+                    <th width="25%">ОБЩАЯ СТОИМОСТЬ</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Товар 1 -->
+                <tr class="souvenir-item">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://referencemodel.ru/sites/default/files/img_20220331_151845.jpg" 
+                                 alt="Модель ракеты" class="souvenir-image me-3">
+                            <div>
+                                <div class="souvenir-name">Модель ракеты "Восток-1" 
+                                </div>
+                                <div class="souvenir-description">
+                                    Детализированная модель первого космического корабля в масштабе 1:144
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="price-tag">
+                            <span id="cena_1">3490</span>
+                            <span class="currency"> руб.</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="quantity-controls">
+                            <div class="quantity-btn" onclick="plus(1)">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="quantity-value" id="col_1">0</div>
+                            <div class="quantity-btn" onclick="minus(1)">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price">
+                            <span id="cenap_1">0</span> руб.
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Товар 2 -->
+                <tr class="souvenir-item">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgLkkIGqygSymgityF2WJ0tfReaKuzxIiAlw&s" 
+                                 alt="Фигурка космонавта" class="souvenir-image me-3">
+                            <div>
+                                <div class="souvenir-name">Фигурка космонавта Юрия Гагарина
+                                </div>
+                                <div class="souvenir-description">
+                                    Коллекционная фигурка первого человека в космосе, высота 15 см
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="price-tag">
+                            <span id="cena_2">2490</span>
+                            <span class="currency"> руб.</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="quantity-controls">
+                            <div class="quantity-btn" onclick="plus(2)">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="quantity-value" id="col_2">0</div>
+                            <div class="quantity-btn" onclick="minus(2)">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price">
+                            <span id="cenap_2">0</span> руб.
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Товар 3 -->
+                <tr class="souvenir-item">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://irptorg.ru/wp-content/uploads/2020/01/WhatsApp-Image-2020-10-15-at-12.21.26.jpeg" 
+                                 alt="Космическая еда" class="souvenir-image me-3">
+                            <div>
+                                <div class="souvenir-name">Набор космической еды "Орбита"
+                                </div>
+                                <div class="souvenir-description">
+                                    5 видов настоящей еды космонавтов в тюбиках
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="price-tag">
+                            <span id="cena_3">1890</span>
+                            <span class="currency"> руб.</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="quantity-controls">
+                            <div class="quantity-btn" onclick="plus(3)">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="quantity-value" id="col_3">0</div>
+                            <div class="quantity-btn" onclick="minus(3)">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price">
+                            <span id="cenap_3">0</span> руб.
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Товар 4 -->
+                <tr class="souvenir-item">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://ir.ozone.ru/s3/multimedia-0/c1000/6840919692.jpg" 
+                                 alt="Планетарий" class="souvenir-image me-3">
+                            <div>
+                                <div class="souvenir-name">Домашний планетарий "Звездное небо"
+                                </div>
+                                <div class="souvenir-description">
+                                    Проектор для создания реалистичного звездного неба в комнате
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="price-tag">
+                            <span id="cena_4">5990</span>
+                            <span class="currency"> руб.</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="quantity-controls">
+                            <div class="quantity-btn" onclick="plus(4)">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="quantity-value" id="col_4">0</div>
+                            <div class="quantity-btn" onclick="minus(4)">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price">
+                            <span id="cenap_4">0</span> руб.
+                        </div>
+                    </td>
+                </tr>
+                
+                <!-- Товар 5 -->
+                <tr class="souvenir-item">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img src="https://i.ebayimg.com/images/g/cMwAAeSw~Bpn1lA8/s-l400.jpg" 
+                                 alt="Телескоп" class="souvenir-image me-3">
+                            <div>
+                                <div class="souvenir-name">Телескоп для начинающих "Галилео"
+                                </div>
+                                <div class="souvenir-description">
+                                    Оптический телескоп с увеличением 150х для наблюдения за звёздами
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="price-tag">
+                            <span id="cena_5">12990</span>
+                            <span class="currency"> руб.</span>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="quantity-controls">
+                            <div class="quantity-btn" onclick="plus(5)">
+                                <i class="fas fa-plus"></i>
+                            </div>
+                            <div class="quantity-value" id="col_5">0</div>
+                            <div class="quantity-btn" onclick="minus(5)">
+                                <i class="fas fa-minus"></i>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="total-price">
+                            <span id="cenap_5">0</span> руб.
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Итоговая сумма -->
+        <div class="total-section">
+            <div class="total-label">
+                <i class="fas fa-shopping-cart me-2"></i> ИТОГОВАЯ СУММА ЗАКАЗА:
+            </div>
+            <div class="total-amount">
+                <span id="itog">0</span> руб.
+            </div>
+            <button class="checkout-btn" onclick="checkout()">
+                <i class="fas fa-rocket me-2"></i> ОФОРМИТЬ КОСМИЧЕСКИЙ ЗАКАЗ
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Основные функции для управления количеством товаров
+        
+        function plus(n) {
+            // Получаем элементы по ID
+            const cena = document.getElementById("cena_" + n);
+            const col = document.getElementById("col_" + n);
+            const cenap = document.getElementById("cenap_" + n);
+            const itog = document.getElementById("itog");
+            const row = document.querySelector(`[onclick="plus(${n})"]`).closest('tr');
+            
+            // Увеличиваем количество
+            col.innerHTML = 1 + Number(col.innerHTML);
+            
+            // Обновляем цену за все штуки этого товара
+            cenap.innerHTML = Number(cenap.innerHTML) + Number(cena.innerHTML);
+            
+            // Обновляем общую сумму
+            itog.innerHTML = Number(itog.innerHTML) + Number(cena.innerHTML);
+            
+            // Анимация добавления
+            row.classList.add('pulse');
+            setTimeout(() => {
+                row.classList.remove('pulse');
+            }, 300);
+            
+            // Обновляем кнопку оформления заказа
+            updateCheckoutButton();
+        }
+        
+        function minus(n) {
+            const cena = document.getElementById("cena_" + n);
+            const col = document.getElementById("col_" + n);
+            const cenap = document.getElementById("cenap_" + n);
+            const itog = document.getElementById("itog");
+            
+            // Проверяем, что количество больше 0
+            if (col.innerHTML != "0") {
+                col.innerHTML = Number(col.innerHTML) - 1;
+                cenap.innerHTML = Number(cenap.innerHTML) - Number(cena.innerHTML);
+                itog.innerHTML = Number(itog.innerHTML) - Number(cena.innerHTML);
+                
+                // Обновляем кнопку оформления заказа
+                updateCheckoutButton();
+            }
+        }
+        
+        // Функция для обновления состояния кнопки оформления заказа
+        function updateCheckoutButton() {
+            const total = Number(document.getElementById("itog").innerHTML);
+            const checkoutBtn = document.querySelector('.checkout-btn');
+            
+            if (total > 0) {
+                checkoutBtn.disabled = false;
+                checkoutBtn.innerHTML = `<i class="fas fa-rocket me-2"></i> ОФОРМИТЬ ЗАКАЗ НА ${total} руб.`;
+            } else {
+                checkoutBtn.disabled = true;
+                checkoutBtn.innerHTML = `<i class="fas fa-rocket me-2"></i> ВЫБЕРИТЕ ТОВАРЫ`;
+            }
+        }
+        
+        // Функция оформления заказа
+        function checkout() {
+            const total = Number(document.getElementById("itog").innerHTML);
+            
+            if (total <= 0) {
+                alert("🚀 Выберите хотя бы один товар для заказа!");
+                return;
+            }
+            
+            // Собираем информацию о выбранных товарах
+            let orderDetails = "🚀 ВАШ КОСМИЧЕСКИЙ ЗАКАЗ:\n\n";
+            let hasItems = false;
+            
+            for (let i = 1; i <= 5; i++) {
+                const quantity = Number(document.getElementById("col_" + i).innerHTML);
+                if (quantity > 0) {
+                    hasItems = true;
+                    const price = Number(document.getElementById("cena_" + i).innerHTML);
+                    const totalPrice = Number(document.getElementById("cenap_" + i).innerHTML);
+                    const productName = document.querySelector(`#cena_${i}`).closest('tr').querySelector('.souvenir-name').textContent.split('\n')[0];
+                    
+                    orderDetails += `${productName}\n`;
+                    orderDetails += `Количество: ${quantity} шт. x ${price} руб. = ${totalPrice} руб.\n\n`;
+                }
+            }
+            
+            orderDetails += `📊 ИТОГО: ${total} руб.\n\n`;
+            orderDetails += "Спасибо за ваш заказ! Наш менеджер свяжется с вами для подтверждения.";
+            
+            // Показываем информацию о заказе
+            alert(orderDetails);
+            
+            // Здесь можно добавить отправку данных на сервер
+            console.log("Заказ оформлен на сумму:", total, "руб.");
+            
+            // Сброс корзины (опционально)
+            // resetCart();
+        }
+        
+        // Функция для сброса корзины
+        function resetCart() {
+            for (let i = 1; i <= 5; i++) {
+                document.getElementById("col_" + i).innerHTML = "0";
+                document.getElementById("cenap_" + i).innerHTML = "0";
+            }
+            document.getElementById("itog").innerHTML = "0";
+            updateCheckoutButton();
+            alert("Корзина очищена!");
+        }
+        
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            updateCheckoutButton();
+            console.log("🚀 Космический магазин сувениров загружен!");
+        });
+    </script>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

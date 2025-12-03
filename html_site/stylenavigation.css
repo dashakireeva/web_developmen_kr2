@@ -1,0 +1,36 @@
+  .space-nav .nav-link {
+    /* Светло-голубой цвет текста */
+    color: #b7dff0;
+    /* Размер шрифта */
+    font-size: 1.1rem;
+    /* Внутренние отступы */
+    padding: 10px 20px;
+    /* Внешние отступы по бокам */
+    margin: 0 5px;
+    /* Прозрачная рамка */
+    border: 2px solid transparent;
+    /* Закругленные углы */
+    border-radius: 25px;
+    /* Плавный переход всех свойств */
+    transition: all 0.3s ease;
+}
+
+  /*Стиль для всех навигационных ссылок*/
+  .nav-link {
+      color: #77d0ff !important;   /* Цвет обычных ссылок*/
+      transition: all 0.3s;          /* Плавная анимация*/
+  }
+
+  /*Эффект при наведение курсора*/
+  .nav-link:hover {
+      background-color: rgba(119, 208, 255, 0.2) !important;
+      transform: translateY(-2px);
+  }
+
+  /*Стиль для активной(выбранной) навигационной ссылки*/
+  .nav-link.active {
+      background-color: rgba(119, 208, 255, 0.3) !important;
+      color: white !important;
+      font-weight: bold;
+      border-bottom: 3px solid #77d0ff !important;
+  }
