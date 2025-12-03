@@ -4,38 +4,39 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta content="width=device-width, initial-scale=1" name="viewport"> <!-- Настройка адаптивного дизайна для мобильных устройств -->
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <!-- Настройка адаптивного дизайна для мобильных устройств -->
     <title>Space — Космическая эра</title>
     <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="stylenavigation.css">
     <link rel="stylesheet" href="stylebackground.css">
+    <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
 </head>
 
 <body>
-    <div class="card">
-        <div class="card-body">
-            <!-- Основная навигация -->
-            <ul class="nav nav-tabs">
-                <li class="nav-item">
-                    <a class="nav-link active" href="./index.html">🚀 Космическая эра</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./souvenirs.html">👨‍🚀 Космические сувениры</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./records.html">⏱️ Космические герои и технологии</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./orders.html">🛍 Заказы</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="https://ru.wikipedia.org/wiki/Байконур" target="_blank">🌌 Байконур</a>
-                </li>
-            </ul>
-        </div>
+    <div class="card"> <!-- 1. Карточка Bootstrap -->
+        <nav class="mb-4 mb-md-5">
+                <ul class="nav nav-tabs flex-column flex-md-row">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./main_page.html">🚀 Космическая эра</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./souvenirs.html">👨‍🚀 Космические сувениры</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./records.html">⏱️ Космические герои и технологии</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./orders.html">🛍 Заказы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://ru.wikipedia.org/wiki/Байконур" target="_blank">🌌 Байконур</a>
+                    </li>
+                </ul>
+            </nav>
 
         <div class="card-body">
             <!-- Навигация внутри страницы -->
@@ -55,7 +56,7 @@
                     <img src="background/rocket.webp" alt="Запуск ракеты" class="img-fluid"
                         style="max-height: 120px; border-radius: 8px;">
                     <div class="mt-2">
-                        <small class="text-muted">Нажмите, чтобы узнать о будущем космонавтики</small>
+                        <small class="text-cosmic-blue">Нажмите, чтобы узнать о будущем космонавтики</small>
                     </div>
                 </a>
             </div>
@@ -194,7 +195,7 @@
                 <img src="background/earth-from-space.jpg" alt="Земля из космоса" class="img-fluid rounded shadow"
                     style="max-height: 300px;">
                 <div class="mt-2">
-                    <small class="text-muted">Вид на Землю с МКС - "Бледно-голубая точка", которая изменила наше
+                    <small class="text-cosmic-blue">Вид на Землю с МКС - "Бледно-голубая точка", которая изменила наше
                         восприятие дома и Вселенной</small>
                 </div>
             </div>
@@ -204,35 +205,9 @@
     <footer class="card card-footer mt-4">
         <div class="card-body text-center">
             <p>© 2025 Космическая эра. Исследуя границы возможного.</p>
-            <small class="text-muted">"Там, где заканчиваются земные пределы, начинаются космические горизонты"</small>
+            <small class="text-cosmic-blue">"Там, где заканчиваются земные пределы, начинаются космические горизонты"</small>
         </div>
     </footer>
-
-    <script>
-        // Подсветка активного раздела при скролле
-        document.addEventListener('DOMContentLoaded', function () {
-            const sections = document.querySelectorAll('.section-highlight');
-            const navLinks = document.querySelectorAll('.btn-group .btn');
-
-            window.addEventListener('scroll', function () {
-                let current = '';
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= (sectionTop - 100)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === '#' + current) {
-                        link.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
 </body>
 
 </html>
